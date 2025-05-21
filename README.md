@@ -219,7 +219,14 @@ is used to **create, list, or delete branches** in a Git repository. A **branch*
 | `git branch <branch-name>`      | Create a new branch                          |
 | `git branch -d <branch-name>`   | Delete a branch                              |
 | `git branch -m <new-name>`      | Rename the current branch                    |
-| `git branch -a`                 | List all branches, including remote ones     |
+| `git branch -a`                 | List all branches, including remote ones     
+|  `git checkout <branch-name>` | To switch a branch |
+| `git checkout -b <branch-name>` | To create and switch to a new branch |
+| `git checkout <branch-name>` | To switch to an existing branch |
+| `git checkout --track origin/branch-name` | To create a branch and switch to it |
+| `git checkout -` | To switch to the branch you were on before |
+| `git checkout -b <branch-name> <commit-hash>` | To switch to a branch and reset it to a specific commit |
+| `git checkout -b <branch-name> <branch-name>` | To switch to a branch and merge it with the current branch |
 
 ---
 
