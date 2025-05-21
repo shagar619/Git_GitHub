@@ -227,6 +227,15 @@ is used to **create, list, or delete branches** in a Git repository. A **branch*
 | `git checkout -` | To switch to the branch you were on before |
 | `git checkout -b <branch-name> <commit-hash>` | To switch to a branch and reset it to a specific commit |
 | `git checkout -b <branch-name> <branch-name>` | To switch to a branch and merge it with the current branch |
+| `git branch --merged` | Show branches already merged into the current branch |
+| `git branch --no-merged` | Show branches not yet merged into the current branch |
+| `git branch --set-upstream-to=<remote>/<branch> <local-branch>` | Set the upstream (tracking) branch |
+| `git branch -u <remote>/<branch> <local-branch>` | Short form of the above |
+| `git show-branch` | Show commits from multiple branches in a summarized format |
+| `git branch -vv` | Show commits from multiple branches in a summarized format |
+| `git branch --contains <commit>` | List branches that contain a specific commit |
+| `git branch --sort=<key>` | Sort branches (e.g., by `committerdate`, `authordate`) |
+| `git branch --format="..."` | Customize the output (e.g., show only branch names or formats) |
 
 ---
 
@@ -282,6 +291,16 @@ Git uses remotes so you can **push** your changes to and **pull** updates from a
 | `git remote remove <name>`                   | Removes a remote                                     |
 | `git remote rename <old> <new>`              | Renames a remote                                     |
 | `git remote show <name>`                     | Shows detailed info about a specific remote          |
+| `git remote set-url <name> <url>`            | Changes the URL for a remote                           |
+| `git remote set-url --push <name> <new-url>` | Changes the push URL specifically (if different from fetch URL) |
+| `git remote set-url --add <name> <url>`      | Adds a new URL to a remote                            |
+| `git remote set-url --delete <name> <url>`   | Deletes a URL from a remote                           |
+| `git remote update`                          | Fetches and merges the latest changes from remotes     |
+| `git remote get-url <name>` | Shows the fetch URL of the remote|
+| `git remote get-url --push <name>` | Shows the push URL of the remote|
+| `git remote show <name>` | Displays detailed information about the specified remote, such as branches tracked and fetch/push configurations|
+| `git remote prune <name>` | Removes stale references to remote branches that no longer exist |
+
 
 ---
 
